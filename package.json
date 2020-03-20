@@ -1,0 +1,24 @@
+{
+  "name": "console-log-h5",
+  "version": "1.0.0",
+  "description": "console.log在移动端可视化打印log，支持颜色配置%c，格式化输出json",
+  "keywords": [
+    "webpack",
+    "loader",
+    "AssemblyScript",
+    "WebAssembly"
+  ],
+  "homepage": "https://github.com/lamovv/console-log-h5.git",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lamovv/console-log-h5.git"
+  }
+}
