@@ -1,6 +1,6 @@
 {
   "name": "console-log-h5",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "console.log在移动端可视化打印log，支持颜色配置%c，格式化输出json",
   "keywords": [
     "h5",
