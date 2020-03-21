@@ -1,11 +1,12 @@
 {
   "name": "console-log-h5",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "console.log在移动端可视化打印log，支持颜色配置%c，格式化输出json",
   "keywords": [
     "h5",
-    "console.log",
-    "mobile"
+    "mobile",
+    "log",
+    "console.log"
   ],
   "homepage": "https://github.com/lamovv/console-log-h5.git",
   "license": "MIT",
