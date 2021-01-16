@@ -9,11 +9,14 @@ import 'console-log-h5';
 
 //格式化json
 console.log({
-  a:1,
-  b:2,
-  c: [1, 2, 3]
+  a: false,
+  b: 0,
+  c: null,
+  d: undefined,
+  e: [1, 2, 3]
+  f: NaN
 });
 
 //配置颜色
-console.log('%c a 比 b 大', 'color:#0f0;');
+console.log('str 1', '%c a 比 b 大', 'color:#0f0;');
 ```

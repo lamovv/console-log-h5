@@ -24,6 +24,7 @@
       if (f) {
         var color = args.splice(i+1, 1);
         arg = arg.replace(/%c\s*(.*)/i, '<span style="' + color + '">$1</span>');
+        l = i;
       }
       msg = i == 0 ? arg : msg +', '+ arg;
       i++;
