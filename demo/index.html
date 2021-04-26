@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="孝瓘"/>
+    <meta name="keywords" content="console-log-h5,demo,case"/>
+    <meta name="description" content="console-log-h5 case"/>
+    <!-- 解决header referrer过长、防盗链问题，origin|never -->
+    <!-- <meta name="referrer" content="origin"/> -->
+    <title>Demo</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <script>
+    (function (d, w) {
+        var uiWidth = 7.5;  // 设计稿 750px;
+        var de = document.documentElement;
+        var e = 'orientationchange' in window ? 'orientationchange':'resize';
+    
+        function setRFS() {
+            var cw = de.clientWidth;
+            de.style.fontSize = cw/uiWidth +'px';
+        };
+        d.addEventListener && (w.addEventListener(e, setRFS, !1), d.addEventListener('DOMContentLoaded', setRFS, !1))
+    })(document, window);
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Case</h1>
+
+    <button data-action="compare">compare</button>
+    <button data-action="mock">mock</button>
+</div>
+<script src="../dist/demo/index.js"></script>
+<!-- <base href="http://localhost"> -->
+</body>
+</html>
