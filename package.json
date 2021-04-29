@@ -86,14 +86,13 @@
     "build:demo": "cross-env NODE_ENV=production webpack --mode=production",
     "build:types": "tsc",
     "ci": "git add -A && git commit -m 'chore(pub): auto'",
-    "prepub": "run-s ci updatev build",
     "prebeta": "run-s updatev:beta build",
-    "postpub": "git push --follow-tags && sync",
-    "publatest": "npm publish --access=public",
     "pubeta": "npm publish --access=public --tag beta",
-    "pub": "run-s publatest",
     "beta": "run-s pubeta sync",
-    "sync": "cnpm sync"
+    "publatest": "npm publish --access=public",
+    "prepub": "run-s ci updatev build",
+    "pub": "run-s publatest",
+    "postpub": "git push --follow-tags && cnpm sync"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
