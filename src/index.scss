@@ -1,11 +1,13 @@
 .console-log-h5 {
   width: 100vw;
+  max-height: 90vh;
   padding: 2px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1e6;
-  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   font: 12px Courier New;
   color: #fff;
@@ -30,5 +32,9 @@
       border-radius: 12px;
       box-shadow: 0px 1px 3px #fff;
     }
+  }
+  p{
+    flex: 1;
+    overflow-y: scroll;
   }
 }
