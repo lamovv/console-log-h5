@@ -1,6 +1,6 @@
 {
   "name": "console-log-h5",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "> console.log，方便在移动设备上查看log",
   "keywords": [
     "console-log-h5"
@@ -12,7 +12,7 @@
   "files": [
     "dist"
   ],
-  "author": "孝瓘<meng.limeng@alibaba-inc.com>",
+  "author": "lamovv<lamovv@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -52,12 +52,14 @@
     "husky": "^6.0.0",
     "ip": "^1.1.5",
     "jest": "^26.6.3",
+    "jest-css-modules": "^2.1.0",
     "lint-staged": "^10.5.3",
     "lodash": "^4.17.15",
     "mini-css-extract-plugin": "^1.4.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.2",
     "rollup": "^2.44.0",
+    "rollup-plugin-sass": "^1.2.2",
     "sass": "^1.32.8",
     "sass-loader": "11.0.1",
     "standard-version": "^9.1.1",
@@ -73,7 +75,7 @@
     "prepare": "husky install",
     "init": "npm run clean && rm -rf node_modules && yarn install -s --force && npm run prepare",
     "init:nolock": "npm run clean && rm -rf node_modules && yarn install -s --force --no-lockfile",
-    "updatev": "standard-version --release-as patch",
+    "updatev": "standard-version --release-as minor",
     "updatev:beta": "standard-version --prerelease beta --skip.changelog --skip.tag",
     "clean": "rm -rf dist",
     "prettier": "prettier --write ./src",
