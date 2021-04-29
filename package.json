@@ -88,10 +88,10 @@
     "ci": "git add -A && git commit -m 'chore(pub): auto'",
     "prepub": "run-s ci updatev build",
     "prebeta": "run-s updatev:beta build",
-    "postpub": "git push --follow-tags",
+    "postpub": "git push --follow-tags && sync",
     "publatest": "npm publish --access=public",
     "pubeta": "npm publish --access=public --tag beta",
-    "pub": "run-s publatest sync",
+    "pub": "run-s publatest",
     "beta": "run-s pubeta sync",
     "sync": "cnpm sync"
   },
