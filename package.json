@@ -1,6 +1,6 @@
 {
   "name": "console-log-h5",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "> console.log，方便在移动设备上查看log",
   "keywords": [
     "console-log-h5"
@@ -85,7 +85,7 @@
     "build:pkg": "rollup -c --silent",
     "build:demo": "cross-env NODE_ENV=production webpack --mode=production",
     "build:types": "tsc",
-    "ci": "git add -A && git commit -m 'chore(pub): auto'", 
+    "ci": "git add -A && git commit -m 'chore(pub): auto'",
     "prepub": "run-s ci updatev build",
     "prebeta": "run-s updatev:beta build",
     "postpub": "git push --follow-tags",
