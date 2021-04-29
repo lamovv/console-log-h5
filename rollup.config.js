@@ -5,6 +5,7 @@ import alias from '@rollup/plugin-alias';
 import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import sass from 'rollup-plugin-sass';
 import { merge } from 'lodash';
 
 const pkg = require('./package.json');
@@ -13,7 +14,6 @@ function genCfg(options){
   return merge({
     input: 'src/index.js',
     output: {
-      
       file: 'dist/index.esm.js',
       format: 'es',
       sourcemap: true
@@ -23,6 +23,10 @@ function genCfg(options){
       return /^@|utils-/i.test(id);
     },
     plugins: [
+      sass({
+        // output: false,
+        insert: true,
+      }),
       alias({
         resolve: ['.js'],
         entries: {},
@@ -35,7 +39,10 @@ function genCfg(options){
         exclude: 'node_modules/**',
         presets: [
           ['@babel/preset-env', {
-            modules: false
+            modules: false,
+            exclude: [
+              'transform-typeof-symbol'
+            ]
           }]
         ],
         plugins: [

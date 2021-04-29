@@ -1,7 +1,7 @@
 import './index.scss';
 import 'console-log-h5';
 
-import { compare } from 'console-log-h5';
+import { log } from 'console-log-h5';
 
 document.addEventListener('click', e => {
     const action = e.target.getAttribute('data-action');
@@ -9,7 +9,7 @@ document.addEventListener('click', e => {
     let ret;
     switch (action) {
       case 'compare':
-        ret = compare(2, 3);
+        ret = log(2, ['H', 'a', 'p', 'p', 'y'], {a: 1, b: 6});
         console.log(ret);
         break;
       case 'mock':

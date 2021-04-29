@@ -1,15 +1,9 @@
 import {
-  compare
+  log
 } from '../src/index';
 
-describe('compare api test', () => {
-  test('a == b', () => {
-    expect(compare(1, 1)).toBe(0);
-  });
-  test('a > b', () => {
-    expect(compare(2, 1)).toBe(true);
-  });
-  test('a < b', () => {
-    expect(compare(1, 2)).toBe(false);
+describe('log foo', () => {
+  test('output foo', () => {
+    expect(log('foo')).toBe(undefined);
   });
 });
