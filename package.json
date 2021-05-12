@@ -1,6 +1,6 @@
 {
   "name": "console-log-h5",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "> console.log，方便在移动设备上查看log",
   "keywords": [
     "console-log-h5"
@@ -90,9 +90,10 @@
     "pubeta": "npm publish --access=public --tag beta",
     "beta": "run-s pubeta sync",
     "publatest": "npm publish --access=public",
-    "prepub": "run-s ci updatev build",
+    "prepub": "run-s updatev build ci",
     "pub": "run-s publatest",
-    "postpub": "git push --follow-tags && cnpm sync"
+    "postpub": "git push --follow-tags && cnpm sync",
+    "sync": "cnpm sync"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
