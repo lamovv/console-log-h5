@@ -31,13 +31,19 @@ const log = (function () {
       } catch (e) {}
       if (f) {
         const color = args.splice(i + 1, 1);
-        arg = arg.replace(/%c\s*(.*)/i, `<span style="${color}">$1</span>`);
+        arg = arg.replace(/%c\s*(.*)/i, `<span style="color: ${color}">$1</span>`);
         l = i;
       }
-      msg = i == 0 ? arg : `${msg}, ${arg}`;
+      if (!/^\s\[.\]/i.test(arg)) {
+        msg = i == 0 ? arg : `${msg}, ${arg}`;
+      }
       i++;
     }
     logNode = logNode || getLNode();
+
+    if (/^\s*\[\w+\]/i.test(msg)) {
+      return;
+    }
 
     count += 1;
     const ih = `${tlog.isError ? '<span style="color:red;">error &gt;</span>' : '&gt;'} ${msg}${/<pre /i.test(msg) ? '' : '<br/>'}`;

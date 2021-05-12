@@ -5,8 +5,14 @@ document.addEventListener('click', e => {
     const action = e.target.getAttribute('data-action');
 
     switch (action) {
-      case 'compare':
+      case 'log':
         console.log(2, ['H', 'a', 'p', 'p', 'y'], {a: 1, b: 6});
+        break;
+      case 'color':
+        console.log('%c red log', '#f00');
+        break;
+      case 'ignore':
+        console.log('[ignore] 被过滤的log');
         break;
       case 'mock':
         fetch('/api/getData.json')
